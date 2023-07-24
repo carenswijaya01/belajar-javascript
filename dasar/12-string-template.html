@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // String template = subtitusi data dari String luar ke dalam String lain
+
+      // Minimalisir concat (+)
+
+      // Pakai backtick ` (sebelah angka 1)
+
+      const firstName = "Carens";
+      const middleName = "Kurniawan";
+      const lastName = "Wijaya";
+      const template = `Name: ${firstName} ${middleName} ${lastName}`;
+
+      document.writeln(template);
+
+      //Bisa pakai operator
+      const nilai = 90;
+      const template2 = `Nilai ${firstName} adalah ${nilai} yang berarti kelulusannya bernilai ${
+        nilai > 70
+      }`;
+
+      document.writeln(template2);
+
+      // Multiline String
+      const template3 = `Nama Saya
+      Carens
+      Kurniawan
+      Wijaya`;
+
+      document.writeln("<pre>");
+      document.writeln(template3);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>

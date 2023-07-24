@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ========= DEFAULT PARAMETER VALUE =========
+      // Jika seharusnya parameter ada value, tapi karena tidak dikirim, supaya tidak menjadi undefined maka akan digunakan nilai defaultnya
+      function register(name, gender = "UNKNOWN") {
+        console.info(`${name} - ${gender}`);
+      }
+
+      register(); // undefined - UNKNOWN
+      register("Carens"); // Carens - UNKNOWN
+      register("Carens", "Male"); // Carens - Male
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Beda dengan undefined, null berarti variabel sudah ada value, hanya saja value nya null (data kosong)
+
+      let name = null;
+      if (name === undefined) {
+        console.info("undefined");
+      } else if (name === null) {
+        console.info(`defined with null: ${name}`);
+      } else {
+        console.info(`defined: ${name}`);
+      }
+    </script>
+  </body>
+</html>

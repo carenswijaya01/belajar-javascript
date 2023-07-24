@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Getter = mendapatkan data
+      // Setter = memberi nilai
+
+      const person = {
+        firstName: "Carens",
+        lastName: "Wijaya",
+        fullNameFunction: function () {
+          return `${this.firstName} ${this.lastName}`;
+        },
+        get fullNameProperty() {
+          return `${this.firstName} ${this.lastName}`;
+        },
+        set changeFirstName(value) {
+          this.firstName = value;
+        },
+        set changeLastName(value) {
+          this.lastName = value;
+        },
+      };
+      console.info(person.fullNameFunction());
+      console.info(person.fullNameProperty);
+
+      person.changeFirstName = "Ceret";
+      person.changeLastName = "Mantap";
+
+      console.info(person.fullNameProperty);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Variabel /  Array / Property yang belum memiliki nilai, berarti nilai awalnya undefined, bukan null
+
+      let name;
+      if (name === undefined) {
+        console.info("undefined");
+      } else {
+        console.info(`defined: ${name}`);
+      }
+
+      const names = ["Carens", "Wijaya"];
+      if (names[2] === undefined) {
+        console.info("Array index undefined");
+      } else {
+        console.info(`Array index defined: ${names[2]}`);
+      }
+
+      const person = {};
+      if (person.name === undefined) {
+        console.info("Object Undefined");
+      } else {
+        console.info(`Object defined: ${person.name}`);
+      }
+    </script>
+  </body>
+</html>

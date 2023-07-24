@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // IF ELSE STATEMENT
+      const value = 90;
+      if (value > 70) {
+        console.info("Mantap");
+      } else if (value > 50 && value < 70) {
+        console.info("Oke lah");
+      } else {
+        console.info("waduh");
+      }
+
+      //SWITCH STATEMENT (HANYA ==)
+      const nilai = "A";
+      switch (nilai) {
+        case "A":
+          document.writeln("<p>Wow anda lulus dengan baik</p>");
+          break;
+        case "B":
+          document.writeln("<p>Anda lulus dengan cukup baik</p>");
+          break;
+        case "C":
+          document.writeln("<p>Anda lulus</p>");
+          break;
+        case "D":
+          document.writeln("<p>Anda tidak lulus, silahkan mengulang</p>");
+          break;
+        case "E":
+          document.writeln("<p>Anda perlu dibenahi</p>");
+          break;
+      }
+    </script>
+  </body>
+</html>

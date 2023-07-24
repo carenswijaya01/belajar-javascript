@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Mirip ternary, tapi hanya untuk cek nullish value
+      // Nullish value = null atau undefined
+      // Pakai tanda ??
+
+      let name;
+      let say = "Hallo " + (name ?? "Anonim"); //Hallo undefined
+      document.writeln(say);
+
+      name = "Carens";
+      say = "Hallo " + (name ?? "Anonim"); // Hallo Carens
+      document.writeln(say);
+    </script>
+  </body>
+</html>

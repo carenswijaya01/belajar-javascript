@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Membatasi JS untuk tidak menggunakan syntax yang tidak direkomendasikan, dan akan dianggap error
+
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+
+      function useStrictFunction() {
+        "use strict";
+        const person = {
+          firstName: "carens",
+          lastName: "wijaya",
+        };
+
+        console.info(person.firstName);
+
+        // error
+        with (person) {
+          console.info(firstName);
+        }
+      }
+
+      useStrictFunction();
+    </script>
+  </body>
+</html>

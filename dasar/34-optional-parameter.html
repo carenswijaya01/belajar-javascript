@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ========= OPTIONAL PARAMETER =========
+      // By default, semua parameter bersifat optional, parameter yang tidak di berikan value akan menjadi undefined
+      function say(firstName, middleName, lastName) {
+        console.info(`Hello ${firstName} ${middleName} ${lastName}`);
+      }
+
+      say(); // Hello undefined undefined undefined
+      say("Carens"); // Hello Carens undefined undefined
+      say("Carens", "Kurniawan"); // Hello Carens Kurniawan undefined
+      say("Carens", "Kurniawan", "Wijaya"); // Hello Carens Kurniawan Wijaya
+    </script>
+  </body>
+</html>

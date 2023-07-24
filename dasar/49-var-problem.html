@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Var tidak recommend karena tidak memiliki block scope, bisa tidak terprediksi
+
+      let i = 20;
+      for (let i = 0; i < 10; i++) {
+        console.info(`Local i = ${i}`);
+      }
+      console.info(`Global i = ${i}`);
+
+      var j = 20;
+      for (var j = 0; j < 10; j++) {
+        console.info(`Local j = ${j}`);
+      }
+      console.info(`Global j = ${j}`);
+    </script>
+  </body>
+</html>

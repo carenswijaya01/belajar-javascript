@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // untuk menurunkan scope data
+      // akses property tanpa sebut variabel
+
+      const person = {
+        firstName: "Carens",
+        lastName: "Wijaya",
+        address: {
+          country: "Indonesia",
+        },
+      };
+
+      // Tanpa with statement
+      console.info(person.firstName);
+      console.info(person.lastName);
+
+      // Dengan with statement
+      with (person) {
+        console.info(firstName);
+        console.info(lastName);
+      }
+
+      with (person.address) {
+        console.info(country);
+      }
+
+      // Tidak direkomendasikan, kadang membuat ambigu karena bisa kesamaan nama variabel
+      const firstName = "Budi";
+      with (person) {
+        console.info(firstName); //Carens, padahal niatnya Budi
+        console.info(lastName);
+      }
+    </script>
+  </body>
+</html>

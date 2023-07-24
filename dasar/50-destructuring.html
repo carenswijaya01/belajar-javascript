@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Membongkar value array / object ke variabel
+
+      // ================= Cara biasa =================
+      // const name = ["Carens", "Kurniawan", "Wijaya"];
+
+      // const firstName = name[0];
+      // const middleName = name[1];
+      // const lastName = name[2];
+
+      // console.info(firstName);
+      // console.info(middleName);
+      // console.info(lastName);
+
+      // ================= Cara Destructuring (Array) =================
+      const names = ["Carens", "Budi", "Eko", "Tono", "Joko"];
+      const [nama1, nama2, ...lainnya] = names;
+      console.info(nama1);
+      console.info(nama2);
+      console.info(lainnya); // Spread Syntax
+      /**
+        nama1 = Carens
+        nama2 = Budi
+        lainnya = ["Eko", "Tono", "Joko"]
+      */
+
+      // ================= Cara Destructuring (Object) =================
+      const person = {
+        firstName: "Carens",
+        lastName: "Wijaya",
+        address: {
+          country: "Indonesia",
+          city: "Semarang",
+        },
+        hobby: "Code",
+      };
+      // Pakai kurawal, nama variabel juga harus sama dengan nama property
+      const {
+        firstName,
+        lastName,
+        address: { country, city }, // Nested
+        ...others
+      } = person;
+      console.info(firstName);
+      console.info(lastName);
+      console.info(country); // Nested
+      console.info(city); // Nested
+      console.info(others);
+      // Kalau mau pakai nama variabel lain
+      const { firstName: namaDepan, lastName: namaBelakang } = person;
+      console.info(namaDepan);
+      console.info(namaBelakang);
+
+      // ================= Cara Destructuring (Function parameter Array / Object) =================
+      function sayHello({ firstName, lastName }) {
+        console.info(`Hello ${firstName} ${lastName}`);
+      }
+
+      function hitungTambah([angka1, angka2]) {
+        return angka1 + angka2;
+      }
+
+      sayHello(person);
+
+      const angka = [1, 2];
+
+      console.info(hitungTambah(angka));
+
+      // ================= Cara Destructuring (Default Value) =================
+      const myName = ["Carens", "Kurniawan"];
+      const [name1, name2, name3 = "Wijaya"] = myName;
+
+      console.info(name1);
+      console.info(name2);
+      console.info(name3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // in operator = untuk cek saja apakah ada property / index di object / array, entah defined (seperti null) maupun undefined
+      // return nya boolean
+
+      const person = {
+        firstName: "Carens",
+        lastName: "Wijaya",
+      };
+
+      const result = "firstName" in person; // true
+      document.writeln(`${result}`);
+
+      if (result === true) {
+        document.writeln(`Hello, ${person.firstName}`);
+      } else {
+        document.writeln("Tidak ditemukan");
+      }
+    </script>
+  </body>
+</html>

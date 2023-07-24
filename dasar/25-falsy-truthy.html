@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Falsy = bukan value boolean false, tapi kalau dalam konteks boolean bersifat dan dianggap false
+
+      /**
+        Macam data falsy:
+
+        false = boolean false
+        0, -0 = number false
+        "", '', `` = string false
+        null
+        undefined
+        NaN
+       **/
+
+      // Truthy = kebalikan dari falsy
+
+      let data = "";
+      // data = 0;
+      // data = -0;
+      // data = null;
+      // data = undefined;
+      // data = NaN;
+      if (data) {
+        alert("TRUE");
+      } else {
+        alert("FALSE");
+      }
+    </script>
+  </body>
+</html>

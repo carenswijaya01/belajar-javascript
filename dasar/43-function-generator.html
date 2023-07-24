@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Funtion untuk membuat data generator yang bisa di iterasi
+      // diberi simbol * setelah function
+      // untuk generate data pakai yield
+
+      function* createNames() {
+        yield "Carens";
+        yield "Kurniawan";
+        yield "Wijaya";
+      }
+
+      const names = createNames();
+      for (const name of names) {
+        console.info(name);
+      }
+
+      // lazy
+      function* buatGanjil(value) {
+        for (let i = 0; i < value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Yield ${i}`);
+            yield i;
+          }
+        }
+      }
+
+      const angkaGanjil = buatGanjil(100);
+      // Function bawaan .next().value
+      // console.info(angkaGanjil.next().value);
+      for (const angka of angkaGanjil) {
+        console.info(angka);
+      }
+
+      // Generator sifatnya lazy
+      // Lazy generator = eksekusi yield nya setiap di iterasi saja
+      /**
+        Yield 1
+        1
+        Yield 2
+        2
+        dst
+      */
+
+      // eager
+      function buatGanjilArray(value) {
+        const arr = [];
+        for (let i = 0; i < value; i++) {
+          if (i % 2 === 1) {
+            console.info(`Yield ${i}`);
+            arr.push(i);
+          }
+        }
+        return arr;
+      }
+
+      const angkaGanjilArray = buatGanjilArray(100);
+      for (const angka of angkaGanjilArray) {
+        console.info(angka);
+      }
+      /**
+        Yield 1
+        Yield 2
+        dst
+        1
+        2
+        dst
+      */
+    </script>
+  </body>
+</html>

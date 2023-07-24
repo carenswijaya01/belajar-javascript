@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ================ FOR LOOP ================
+      /** 
+
+      for(init statement;condition;post statement){
+        execute
+      }
+
+      **/
+
+      // ================ FOR IN LOOP ================
+      // iterasi key/index seluruh data object/array
+      // Array biasanya tidak recommend, lebih recommend dengan for of, namun bisa saja dengan for in
+      /**
+        const person = {
+          firstName: "Carens",
+          lastName: "Wijaya",
+        };
+
+        for (const property in person) {
+          console.info(`Property ${property} memilik nilai ${person[property]}`);
+        }
+
+        const names = ["Carens", "Wijaya"];
+
+        for (const index in person) {
+          console.info(`Index ${index} memilik nilai ${person[index]}`);
+        }
+      **/
+
+      // ================ FOR OF LOOP ================
+      // iterasi value seluruh data array / string (object tidak bisa, object tidak iterable)
+      /**
+        const names = ["Carens", "Wijaya"];
+
+        for (const value of names) {
+          console.info(`Valuenya adalah ${value}`);
+        }
+
+        const nama = "Carens Kurniawan Wijaya";
+        for (const karakter of nama) {
+          console.info(`${karakter}`);
+        }
+      **/
+
+      // ================ WHILE LOOP ================
+      /** 
+      init statement;
+      while(condition){
+        execute
+        post statement (optional)
+      }
+      **/
+
+      // ================ DO WHILE LOOP (Minimal sekali di eksekusi) ================
+      /** 
+      init statement;
+      do{
+        execute
+        post statement (optional)
+      }
+      while(condition)
+      **/
+    </script>
+  </body>
+</html>

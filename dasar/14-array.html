@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [];
+
+      // array.push(value) = tambah data ke array di AKHIR
+      arr.push("1");
+      arr.push(2);
+      console.info("push");
+      console.table(arr);
+
+      // array.pop() = hapus data di array di AKHIR
+      arr.pop();
+      console.info("pop");
+      console.table(arr);
+
+      // array.unshift() = tambah data ke array di AWAL
+      arr.unshift("uwu");
+      console.info("unshift");
+      console.table(arr);
+
+      // array.shift() = hapus data ke array di AWAL
+      arr.shift();
+      console.info("shift");
+      console.table(arr);
+
+      // array.length = panjang array
+      console.info(`Panjang array adalah ${arr.length}`);
+
+      // array[index] = mendapat data di index tertentu
+      console.info(`Array index ke 0 adalah ${arr[0]}`);
+
+      // array[index] = value = ubah nilai data di index tertentu
+      arr[1] = 3;
+      console.table(arr);
+
+      // array.join(string) = menggabungkan seluruh isi array dan diubah ke string
+      console.info(
+        `Array setelah dijoin dengan " - " menjadi ${arr.join(" - ")}`
+      ); // 1 - 3
+
+      // array.splice(indexAwal, mauHapusBerapa, elemenBaru1, elemenBaru2, ...) = menambahkan value di index tertentu
+      // posisi array sekarang = [1, 3]
+      arr.splice(1, 0, 1, 2, 3);
+      console.info("splice (sisipkan) 1 2 3 mulai index ke 1");
+      console.table(arr); // [1, 1, 2, 3, 3]
+
+      // array.slice(awal, akhir) = ambil value dari range index tertentu
+      // posisi array sekarang = [1, 1, 2, 3, 3]
+      let arrBaru = arr.slice(1, 3); // 1, 2
+      console.info("slice (ambil) value dari index ke 1 sampai sebelum 3");
+      console.table(arrBaru);
+
+      // delete array[index] = hapus data di posisi index tanpa menggeser index kanannya
+      delete arr[0];
+      console.info("Delete value di index 0");
+      console.table(arr);
+    </script>
+  </body>
+</html>

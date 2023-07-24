@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ========= REST PARAMETER =========
+      // Konversi data yang dikirim ke parameter banyak menjadi 1 array
+      // Hanya boleh ada 1 di function
+      // Hanya boleh berada di posisi paling akhir
+      // Dibahasa lain namanya variable argument
+
+      function restFunction(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+
+        console.info(`Total dari ${name} adalah ${total}`);
+      }
+
+      restFunction("Belanja Carens", 0, 1, 2, 3, 4, 5);
+
+      // ========= SPREAD SYNTAX =========
+      // Kalau terlanjur sudah punya array untuk dikirim tapi functionnya ada rest parameter
+
+      const values = [10, 10, 10];
+      restFunction("Belanja Carens", values); // Total dari Belanja Carens adalah 010,10,10 -> tidak sesuai yang diharapkan
+
+      // Tambahkan ...
+      restFunction("Belanja Carens", ...values); // Total dari Belanja Carens adalah 30 -> baru benar
+    </script>
+  </body>
+</html>
